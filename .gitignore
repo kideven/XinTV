@@ -1,0 +1,2 @@
+# XinTV: 排除 Crosswalk 运行时包（106MB，App 运行时按需下载，不参与编译）
+xwalk/*.zip
