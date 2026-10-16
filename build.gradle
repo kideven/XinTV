@@ -8,6 +8,8 @@ buildscript {
         maven { url "https://jitpack.io" }
         maven { url "https://storage.googleapis.com/r8-releases/raw" }
         maven { url "https://chaquo.com/maven" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:7.4.2'
@@ -26,6 +28,8 @@ allprojects {
         mavenCentral()
         gradlePluginPortal()
         maven { url "https://jitpack.io" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://maven.aliyun.com/repository/google" }
     }
 }
 
