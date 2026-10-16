@@ -24,10 +24,10 @@ jobs:
         run: echo "sdk.dir=$ANDROID_HOME" > local.properties
 
       - name: Build XinTV debug APK (generic)
-        run: ./gradlew assembleGenericNormalDebug --stacktrace
+        run:  ./gradlew assembleArm64GenericNormalDebug --stacktrace
 
       - name: Upload XinTV APK
         uses: actions/upload-artifact@v4
         with:
           name: XinTV-debug-apk
-          path: app/build/outputs/apk/**/*.apk
+          path: app/build/outputs/apk/arm64/generic/normal/debug/_.apk
