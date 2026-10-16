@@ -1,1 +1,34 @@
-Ly8gVG9wLWxldmVsIGJ1aWxkIGZpbGUgd2hlcmUgeW91IGNhbiBhZGQgY29uZmlndXJhdGlvbiBvcHRpb25zIGNvbW1vbiB0byBhbGwgc3ViLXByb2plY3RzL21vZHVsZXMuCmJ1aWxkc2NyaXB0IHsKICAgIGV4dC5rb3RsaW5fdmVyc2lvbiA9ICIxLjkuMjUiCiAgICByZXBvc2l0b3JpZXMgewogICAgICAgIGdvb2dsZSgpCiAgICAgICAgbWF2ZW5DZW50cmFsKCkKICAgICAgICBncmFkbGVQbHVnaW5Qb3J0YWwoKQogICAgICAgIG1hdmVuIHsgdXJsICJodHRwczovL2ppdHBhY2suaW8iIH0KICAgICAgICBtYXZlbiB7IHVybCAiaHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3I4LXJlbGVhc2VzL3JhdyIgfQogICAgICAgIG1hdmVuIHsgdXJsICJodHRwczovL2NoYXF1by5jb20vbWF2ZW4iIH0KICAgIH0KICAgIGRlcGVuZGVuY2llcyB7CiAgICAgICAgY2xhc3NwYXRoICdjb20uYW5kcm9pZC50b29scy5idWlsZDpncmFkbGU6Ny40LjInCiAgICAgICAgY2xhc3NwYXRoICJvcmcuamV0YnJhaW5zLmtvdGxpbjprb3RsaW4tZ3JhZGxlLXBsdWdpbjoka290bGluX3ZlcnNpb24iCiAgICAgICAgLy8gTk9URTogRG8gbm90IHBsYWNlIHlvdXIgYXBwbGljYXRpb24gZGVwZW5kZW5jaWVzIGhlcmU7IHRoZXkgYmVsb25nCiAgICAgICAgLy8gaW4gdGhlIGluZGl2aWR1YWwgbW9kdWxlIGJ1aWxkLmdyYWRsZSBmaWxlcwogICAgICAgIGNsYXNzcGF0aCgiY29tLmFuZHJvaWQudG9vbHM6cjg6OC41LjM1IikKICAgICAgICBjbGFzc3BhdGggJ2NvbS55YW56aGVuamllLmFuZHNlcnZlcjpwbHVnaW46Mi4xLjEyJwogICAgICAgIGNsYXNzcGF0aCAiY29tLmNoYXF1by5weXRob246Z3JhZGxlOjEyLjAuMSIKICAgIH0KfQoKYWxscHJvamVjdHMgewogICAgcmVwb3NpdG9yaWVzIHsKICAgICAgICBnb29nbGUoKQogICAgICAgIG1hdmVuQ2VudHJhbCgpCiAgICAgICAgZ3JhZGxlUGx1Z2luUG9ydGFsKCkKICAgICAgICBtYXZlbiB7IHVybCAiaHR0cHM6Ly9qaXRwYWNrLmlvIiB9CiAgICB9Cn0KCnRhc2tzLnJlZ2lzdGVyKCdjbGVhbicsIERlbGV0ZSkgewogICAgZGVsZXRlIHJvb3RQcm9qZWN0LmJ1aWxkRGlyCn0K
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext.kotlin_version = "1.9.25"
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+        maven { url "https://storage.googleapis.com/r8-releases/raw" }
+        maven { url "https://chaquo.com/maven" }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.4.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        classpath("com.android.tools:r8:8.5.35")
+        classpath 'com.yanzhenjie.andserver:plugin:2.1.12'
+        classpath "com.chaquo.python:gradle:12.0.1"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+tasks.register('clean', Delete) {
+    delete rootProject.buildDir
+}
