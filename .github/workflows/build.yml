@@ -30,4 +30,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: XinTV-debug-apk
-          path: app/build/outputs/apk/arm64/generic/normal/debug/*.apk
+          path: path: app/build/outputs/apk/_/debug/_.apk
